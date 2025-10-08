@@ -17,7 +17,8 @@
 - USTC-TFC: https://github.com/yungshenglu/USTC-TFC2016/
 
 # Self-Collected Datasets
-In this paper, we collect 7 mobile app traffic trace datasets, which include a single-app multi-flow dataset `SAMF`, a multi-app multi-flow dataset `MAMF`, four dynamic networking environment datasets: `SAMF-Drift, SAMF-Region, SAMF-Net, SAMF-Failure`, and a fine-grained in-app activity dataset `SAMF-Activity`.
+In this paper, we collect 6 mobile app traffic trace datasets, which include a static mobile app multi-flow dataset `MAMF`, four dynamic networking environment datasets: `MAMF-Drift, MAMF-Region, MAMF-Net, MAMF-Failure`, and a fine-grained in-app activity dataset `MAMF-Activity`.
 
-To avoid the risk of sensitive traffic data leakage, we have only provided a demonstration sample in `./Traffic_Traces/SAMF/air.tv.douyu.android`. The complete self-collected datasets will be released after our paper is accepted.
+To avoid the risk of sensitive traffic data leakage, we have only provided a demonstration sample in `./Traffic_Traces/MAMF/air.tv.douyu.android`. The complete self-collected datasets will be released after our paper is accepted.
+
 
