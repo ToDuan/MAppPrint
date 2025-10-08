@@ -41,7 +41,7 @@ scikit-learn==1.3.2
  **Download** processed dataset from https://drive.google.com/drive/folders/1j2l9rYI6_bNES6UTYU4qqIGFL4qEfMuU?usp=sharing to folder `./Datasets/TBCGs/MAMF/10/`, 
 and then **Run**: `nohup sh ./MAppPrint/train.sh > /dev/null 2>&1`
 
-You can obtain the following results (i.e., the performance of MAppPrint-MC on the FOAP dataset with a 5-second time window):
+You can obtain the following results (i.e., the performance of MAppPrint-MC on the MAMF dataset with a 10-second time window):
 
 <img src="figers/MAppPrint_in_MAMF(10s).jpg" alt="MAppPrint_in_MAMF(10s)" style="zoom: 50%;" />
 
@@ -86,5 +86,6 @@ You can obtain the following results (i.e., the performance of MAppPrint-MC on t
 # Notes
 
 The training logs, results, and model parameters are saved in the `./MAppPrint/train_log`, `./MAppPrint/train_result`, and `./MAppPrint/trained_model` folders, respectively.
+
 
 
