@@ -45,7 +45,7 @@ You can obtain the following results (i.e., the performance of MAppPrint on the 
 
 <img src="figers/MAppPrint_in_MAMF(10s).jpg" alt="MAppPrint_in_MAMF(10s)" style="zoom: 50%;" />
 
-# Use MAppPrint&MAppPrint-MC
+# Use MAppPrint
 
 #### 1. TBCG Construction
 
@@ -86,6 +86,7 @@ You can obtain the following results (i.e., the performance of MAppPrint on the 
 # Notes
 
 The training logs, results, and model parameters are saved in the `./MAppPrint/train_log`, `./MAppPrint/train_result`, and `./MAppPrint/trained_model` folders, respectively.
+
 
 
 
