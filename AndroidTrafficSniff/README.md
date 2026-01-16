@@ -33,17 +33,17 @@
 ## Mobile App Traffic Triggering and Labeling：
 ### Generate In-App Activity Execution Functions:
 
-1. Complete the pre-installation of **weditor**. Connect your phone to the computer via USB, and after ensuring the phone is successfully connected, execute the following command in the terminal: `weditor` to open the activities recording interface.
-2. 
-3. Switch the interface to **real-time mode**, enabling the left-side panel to be fully interactive.
-4. 
-5. Double-click on the webpage to open the target app, then click the corresponding button to record the associated activities (the script on the right will update in real time).  
+1. Complete the pre-installation of **weditor**. Connect your phone to the computer via USB, and after ensuring the phone is successfully connected, execute the following command in the terminal: `weditor` to open the activities recording interface. 
+  
+2. Switch the interface to **real-time mode**, enabling the left-side panel to be fully interactive.
+  
+3. Double-click on the webpage to open the target app, then click the corresponding button to record the associated activities (the script on the right will update in real time).
+  
+4.  After completing the activity recording, copy the code on the right and save it to the local directory `./apksActivity`. Name the function based on the package name (e.g., for `com.sina.weibo`, name it `com_sina_weibo`). Additionally, you can set loops or conditional statements as needed, configure time delays, and optimize the activity execution.
 
-6. After completing the activity recording, copy the code on the right and save it to the local directory `./apksActivity`. Name the function based on the package name (e.g., for `com.sina.weibo`, name it `com_sina_weibo`). Additionally, you can set loops or conditional statements as needed, configure time delays, and optimize the activity execution.
+5. Import the function into `./executeBystr.py`, and add the corresponding package name (e.g., `com.sina.weibo`) to the relevant list in `main_sniff.py`, such as `NORMALPKGLIST`.
 
-7. Import the function into `./executeBystr.py`, and add the corresponding package name (e.g., `com.sina.weibo`) to the relevant list in `main_sniff.py`, such as `NORMALPKGLIST`.
-
-8. Run `python3 uiautomator2_test.py` to check if the environment is set up successfully.
+6. Run `python3 uiautomator2_test.py` to check if the environment is set up successfully.
 
    
 
