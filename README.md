@@ -1,4 +1,4 @@
-# MAppPrint
+# MAppPrint_USENIX25_Submission
 
 
 
@@ -6,9 +6,9 @@ Datasets and code implementation for paper:  ''MAppPrint: Fast and Robust Mobile
 
 This repository contains:
 
-- (1) **Code of MAppPrint** (in folder `./MAppPrint`);
-- (2) **Code of Mobile App Traffic Triggering and Labeling System** (in folder `./AndroidTrafficSniff`);
-- (3) **Public and Self-collected Datasets** (in folder `./Datasets`).
+- (1) Code of MAppPrint (in folder);
+- (2) Code of our mobile app traffic triggering and labeling system ( in folder );
+- (3) Datasets utilized in our paper (in folder ).
 
 
 
@@ -17,78 +17,83 @@ This repository contains:
 python==3.8.0
 
 torch==1.11.0+cu113
-
 torchvision==0.12.0+cu113
-
 torchsummary==1.5.1
-
 torchaudio==0.11.0
 
 dgl-cu113==0.9.1.post1
-
 numpy==1.24.4
-
 pandas==2.0.3
-
 scikit-learn==1.3.2
 
-**You can directly clone the conda environment using the `./MAppPrint_conda_env.yml` file:**
+**You can directly clone the conda environment using the `MAppPrint_conda_env.yml' file:**
 
-`conda env create -f MAppPrint_conda_env.yml`
+conda env create -f MAppPrint_conda_env.yml
 
 # Toy Example
 
- **Download** processed dataset from https://drive.google.com/drive/folders/1j2l9rYI6_bNES6UTYU4qqIGFL4qEfMuU?usp=sharing to folder `./Datasets/TBCGs/MAMF/10/`, 
-and then **Run**: `nohup sh ./MAppPrint/train.sh > /dev/null 2>&1`
+https://drive.google.com/drive/folders/1wvZwYn3XJOlc0WfeINMJsCVwIUfr-_8f?usp=drive_link
 
-You can obtain the following results (i.e., the performance of MAppPrint on the MAMF dataset with a 10-second time window):
+run: nohup sh train.sh > /dev/null 2>&1
 
-<img src="figers/MAppPrint_in_MAMF(10s).jpg" alt="MAppPrint_in_MAMF(10s)" style="zoom: 50%;" />
+You can obtain the following results (i.e., the performance of MAppPrint-MC on the FOAP dataset with a 5-second time window):
 
-# Use MAppPrint
+<img src="figers/MAppPrintMC_FOAP_5s.png" alt="MAppPrintMC_FOAP_5s" style="zoom: 67%;" />
+
+# Use MAppPrint/MAppPrint-MC
 
 #### 1. TBCG Construction
 
-**Traffic Trace Pre-processing:** 
+###### Traffic Trace pre-processing: 
 
 - Parse the pcap traffic traces, extract per-packet features, and convert them into CSV files.
 
-  -- Run: `./MAppPrint/tbcg_construction/pcap2csv.py`
+  -- run: 
 
 - Segment the traffic traces into samples based on the specified time window size (i.e., 5s, 10s, 20s, 30s, or 60s).
 
-  -- Run: `./MAppPrint/tbcg_construction/traces_segment.py`
+  -- run: 
 
 - Split the training and testing datasets.
 
-  -- Run: `./MAppPrint/tbcg_construction/datasets_split.py`
+  -- run: 
 
-**Construct a Traffic Behavior Causal Graph (TBCG): Transform each traffic trace into a TBCG.**
+###### Construct a Traffic Behavior Causal Graph (TBCG): Transform each traffic trace into a TBCG.
 
--- Run: `./MAppPrint/tbcg_construction/graph_construction.py`
+-- run: 
 
 #### 2. TBCG Compression
 
-**Anchor Nodes Mining: Extract high-frequency unit traffic behaviors from the training set as anchor nodes.**
+###### Anchor Nodes Mining: Extract high-frequency unit traffic behaviors from the training set as anchor nodes.
 
--- Run: `./MAppPrint/tbcg_compression/anchors_mining.py`
+-- run: 
 
-**TCBG Compression: Compare the similarity between TCBG nodes and anchor nodes, and aggregate similar nodes.**
+###### TCBG Compression: Compare the similarity between TCBG nodes and anchor nodes, and aggregate similar nodes.
 
--- Run: `./MAppPrint/tbcg_compression/graph_compress.py`
+-- run: 
 
 #### 3. Mobile App Identification
 
-**Train GNN-based classifier** 
+###### MAppPrint-MA: Multi-classifier version of MAppPrint 
 
---Run: `./MAppPrint/train.py`
+--run: 
+
+###### MAppPrint:
+
+- Single-/Multi-App Running Modes Differentiation
+
+  --run: 
+
+- Multi-App TBCG Separation  
+
+  --run:
+
+- Single-App TBCG Identification
+
+  --run: 
+
+
 
 # Notes
 
-The training logs, results, and model parameters are saved in the `./MAppPrint/train_log`, `./MAppPrint/train_result`, and `./MAppPrint/trained_model` folders, respectively.
-
-
-
-
-
-
+The training logs, results, and model parameters are saved in the train_log, train_result, and trained_model folders, respectively.
