@@ -104,7 +104,7 @@
 
 
 
-### Fine-Grained In-App Activities Traffic Collection
+### Fine-Grained Multi-Action Traffic Collection
 
 1. Execute the following command in the terminal:
     `python3 apksInstall.py --apkspath ./apkStore --device device_sn`
