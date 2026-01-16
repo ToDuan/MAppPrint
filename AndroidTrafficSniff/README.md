@@ -34,12 +34,10 @@
 ### Generate In-App Activity Execution Functions:
 
 1. Complete the pre-installation of **weditor**. Connect your phone to the computer via USB, and after ensuring the phone is successfully connected, execute the following command in the terminal: `weditor` to open the activities recording interface.
+   
 2. Switch the interface to **real-time mode**, enabling the left-side panel to be fully interactive.
 
-![切换页面实时模式](./images/turn_mode.png)
-
 3. Double-click on the webpage to open the target app, then click the corresponding button to record the associated activities (the script on the right will update in real time).
-   ![weditor操作演示](./images/weditor_show.png)
 
 4. After completing the activity recording, copy the code on the right and save it to the local directory `./apksActivity`. Name the function based on the package name (e.g., for `com.sina.weibo`, name it `com_sina_weibo`). Additionally, you can set loops or conditional statements as needed, configure time delays, and optimize the activity execution.
 
@@ -119,4 +117,5 @@
    - Each activity will collect `sample_num` pcap files.
 4. Once traffic collection is completed:
    - The pcap files corresponding to each app’s traffic are saved in the specified `traffic_path`.
+
    - The mapping of each flow in the pcap files to the corresponding app is saved in `flow2uid_path`.
