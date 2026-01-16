@@ -6,9 +6,9 @@ Datasets and code implementation for paper:  ''MAppPrint: Fast and Robust Mobile
 
 This repository contains:
 
-- (1) Code of MAppPrint (in folder);
-- (2) Code of our mobile app traffic triggering and labeling system ( in folder );
-- (3) Datasets utilized in our paper (in folder ).
+- (1) **Code of MAppPrint** (in folder `./MAppPrint`);
+- (2) **Code of Mobile App Traffic Triggering and Labeling System** (in folder `./AndroidTrafficSniff`);
+- (3) **Public and Self-collected Datasets** (in folder `./Datasets`).
 
 
 
@@ -47,41 +47,37 @@ You can obtain the results of MAppPrint on the SIM-APP dataset with a 5-second t
 
 - Parse the pcap traffic traces, extract per-packet features, and convert them into CSV files.
 
-  -- run: 
+  -- run: `./MAppPrint/tbcg_construction/pcap2csv.py`
 
 - Segment the traffic traces into samples based on the specified time window size (i.e., 5s, 10s, 20s, 30s, or 60s).
 
-  -- run: 
+  -- run: `./MAppPrint/tbcg_construction/traces_segment.py`
 
 - Split the training and testing datasets.
 
-  -- run: 
+  -- run:  `./MAppPrint/tbcg_construction/datasets_split.py`
 
 ###### Construct a Traffic Behavior Causal Graph (TBCG): Transform each traffic trace into a TBCG.
 
--- run: 
+-- run: `./MAppPrint/tbcg_construction/graph_construction.py`
 
 #### 2. TBCG Compression
 
 ###### Anchor Nodes Mining: Extract high-frequency unit traffic behaviors from the training set as anchor nodes.
 
--- run: 
+-- run: `./MAppPrint/tbcg_compression/anchors_mining.py`
 
 ###### TCBG Compression: Compare the similarity between TCBG nodes and anchor nodes, and aggregate similar nodes.
 
--- run: 
+-- run: `./MAppPrint/tbcg_compression/graph_compress.py`
 
 #### 3. Mobile App Identification
-
-###### MAppPrint-MA: Multi-classifier version of MAppPrint 
-
---run: 
 
 ###### MAppPrint:
 
 - Single-/Multi-App Running Modes Differentiation
 
-  --run: 
+  --run:
 
 - Multi-App TBCG Separation  
 
@@ -97,3 +93,4 @@ You can obtain the results of MAppPrint on the SIM-APP dataset with a 5-second t
 
 
 The training logs, results, and model parameters are saved in the train_log, train_result, and trained_model folders, respectively.
+
