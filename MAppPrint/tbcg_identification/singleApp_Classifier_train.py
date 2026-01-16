@@ -67,23 +67,6 @@ App_Simi = ['diijam', 'myradio', 'spotify', 'nhaccuatui', 'soundcloud', 'sachnoi
             'voizfm',
             'tunefm', 'radiofm', 'nhacvang', 'wesing', 'kaka', 'podcast_player', 'starmarker', 'zingmp3', 'truyenaudio']
 
-App_Diff = ['zingmp3', 'fptplay', 'baomoi', 'nimotv', 'messenger', 'tiki', 'facebook', 'lienquan_mobile', 'quora',
-            'among_us', 'azar', 'tiktok', 'medoctruyen', 'weeboo', 'tinder', 'hago', 'bida']
-
-
-FOAP = ['com.discord', 'com.azure.authenticator', 'com.shopify.arrive', 'com.bamnetworks.mobile.android.gameday.atbat',
-        'com.lingodeer','com.snapchat.android', 'com.northghost.touchvpn', 'com.skype.raider', 'ca.crea.app.consumer',
-        'com.phenix.cajou', 'com.mobilemedia.tanuki', 'com.yahoo.mobile.client.android.mail', 'com.proan.bestmart360',
-        'com.dywx.larkplayer', 'tw.com.youbike.plus', 'com.pratilipi.comics', 'com.lemon.lvoverseas',
-        'com.dailywire.thedailywire', 'com.viamichelin.android.viamichelinmobile', 'com.bbc.sounds', 'video.reface.app',
-        'org.aastudio.games.longnards', 'com.saramart.android', 'ru.labirint.android']
-
-SAMF = ['com.autonavi.minimap', 'com.netease.cloudmusic', 'com.kmxs.reader', 'com.dragon.read',
-        'com.hunantv.imgo.activity', 'com.xunmeng.pinduoduo', 'tv.danmaku.bili', 'com.ss.android.ugc.aweme',
-        'net.csdn.csdnplus', 'com.sina.weibog3', 'com.smile.gifmaker', 'com.taobao.taobao', 'com.UCMobile',
-        'com.tencent.qqlive', 'com.baidu.searchbox', 'com.jingdong.app.mall', 'com.zhihu.android', 'com.qiyi.video']
-
-
 def sampling(app_label2inx, subdataset, graphs, labels):
     subdata_label = [app_label2inx[app] for app in subdataset] # indx label of subdataset in app_label space
 
