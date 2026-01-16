@@ -1,4 +1,4 @@
-# MAppPrint_USENIX25_Submission
+# MAppPrint_CCS2026_Submission
 
 
 
@@ -36,9 +36,8 @@ https://drive.google.com/drive/folders/1wvZwYn3XJOlc0WfeINMJsCVwIUfr-_8f?usp=dri
 
 run: nohup sh train.sh > /dev/null 2>&1
 
-You can obtain the following results (i.e., the performance of MAppPrint-MC on the FOAP dataset with a 5-second time window):
+You can obtain the results of MAppPrint on the SIM-APP dataset with a 5-second time window
 
-<img src="figers/MAppPrintMC_FOAP_5s.png" alt="MAppPrintMC_FOAP_5s" style="zoom: 67%;" />
 
 # Use MAppPrint/MAppPrint-MC
 
@@ -88,12 +87,13 @@ You can obtain the following results (i.e., the performance of MAppPrint-MC on t
 
   --run:
 
-- Single-App TBCG Identification
+- App idetification
 
   --run: 
 
 
 
 # Notes
+
 
 The training logs, results, and model parameters are saved in the train_log, train_result, and trained_model folders, respectively.
