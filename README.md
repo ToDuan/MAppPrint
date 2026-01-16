@@ -77,20 +77,14 @@ You can obtain the results of MAppPrint on the SIM-APP dataset with a 5-second t
 
 - Single-/Multi-App Running Modes Differentiation
 
-  --run:
+  --run: `./App_RunModel_different.py`
 
 - Multi-App TBCG Separation  
 
-  --run:
+  --run: `./multiapp_separate.py`
 
 - App idetification
 
-  --run: 
+  --run: `./singleApp_Classifier_train.py`
 
-
-
-# Notes
-
-
-The training logs, results, and model parameters are saved in the train_log, train_result, and trained_model folders, respectively.
 
