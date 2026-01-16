@@ -1,4 +1,4 @@
-# MAppPrint_WWW26_Submission
+# MAppPrint
 
 
 
@@ -86,6 +86,7 @@ You can obtain the following results (i.e., the performance of MAppPrint on the 
 # Notes
 
 The training logs, results, and model parameters are saved in the `./MAppPrint/train_log`, `./MAppPrint/train_result`, and `./MAppPrint/trained_model` folders, respectively.
+
 
 
 
