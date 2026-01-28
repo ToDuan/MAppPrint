@@ -19,7 +19,7 @@ import os
 device = th.device("cuda" if th.cuda.is_available() else "cpu")
 
 params = {
-    "dataset": "FOAP",
+    "dataset": "SIM-APP",
     "time_win": "5_0",
 
     "in_feats": 22,
@@ -63,7 +63,7 @@ test_graphs, test_graph_labels = DataTransLoad(usedumpData=True, dumpFilename=te
 with open(app2labeldict_path, 'r') as f:
     App2label = json.load(f)
 
-App_Simi = ['diijam', 'myradio', 'spotify', 'nhaccuatui', 'soundcloud', 'sachnoiapp', 'truyenaudiosachnoiviet',
+SIM-APP = ['diijam', 'myradio', 'spotify', 'nhaccuatui', 'soundcloud', 'sachnoiapp', 'truyenaudiosachnoiviet',
             'voizfm',
             'tunefm', 'radiofm', 'nhacvang', 'wesing', 'kaka', 'podcast_player', 'starmarker', 'zingmp3', 'truyenaudio']
 
@@ -96,7 +96,7 @@ def sampling(app_label2inx, subdataset, graphs, labels):
     return smp_graphs, th.tensor(subapp_idxlabels).to(device), subapp_label2idx
 
 
-target_datastet = FOAP
+target_datastet = SIM-APP
 classes_num = len(target_datastet)
 
 BATCH_SIZE = params['batch_size']
