@@ -39,7 +39,7 @@ run: nohup sh train.sh > /dev/null 2>&1
 You can obtain the results of MAppPrint on the SIM-APP dataset with a 5-second time window
 
 
-# Use MAppPrint/MAppPrint-MC
+# Use MAppPrint
 
 #### 1. TBCG Construction
 
@@ -86,5 +86,6 @@ You can obtain the results of MAppPrint on the SIM-APP dataset with a 5-second t
 - App idetification
 
   --run: `./singleApp_Classifier_train.py`
+
 
 
