@@ -25,27 +25,12 @@ multiApp_info = pd.read_csv(multiApp_info_path)
 
 Trainset_info = Trainset_info[Trainset_info.predicted != 'None']
 
-Trainset_info = Trainset_info[['com.autonavi.minimap', 'com.netease.cloudmusic', 'com.kmxs.reader',
-       'com.dragon.read', 'com.hunantv.imgo.activity', 'com.xunmeng.pinduoduo',
-       'tv.danmaku.bili', 'com.ss.android.ugc.aweme', 'net.csdn.csdnplus',
-       'com.sina.weibog3', 'com.smile.gifmaker', 'com.taobao.taobao',
-       'com.UCMobile', 'com.tencent.qqlive', 'com.baidu.searchbox',
-       'com.jingdong.app.mall', 'com.zhihu.android', 'com.qiyi.video']]
+Trainset_info = Trainset_info[[:]]
 
-singleApp_info = singleApp_info[['com.autonavi.minimap', 'com.netease.cloudmusic', 'com.kmxs.reader',
-       'com.dragon.read', 'com.hunantv.imgo.activity', 'com.xunmeng.pinduoduo',
-       'tv.danmaku.bili', 'com.ss.android.ugc.aweme', 'net.csdn.csdnplus',
-       'com.sina.weibog3', 'com.smile.gifmaker', 'com.taobao.taobao',
-       'com.UCMobile', 'com.tencent.qqlive', 'com.baidu.searchbox',
-       'com.jingdong.app.mall', 'com.zhihu.android', 'com.qiyi.video']]
+singleApp_info = singleApp_info[[:]]
 singleApp_info['label'] = 0
 
-multiApp_info = multiApp_info[['com.autonavi.minimap', 'com.netease.cloudmusic', 'com.kmxs.reader',
-       'com.dragon.read', 'com.hunantv.imgo.activity', 'com.xunmeng.pinduoduo',
-       'tv.danmaku.bili', 'com.ss.android.ugc.aweme', 'net.csdn.csdnplus',
-       'com.sina.weibog3', 'com.smile.gifmaker', 'com.taobao.taobao',
-       'com.UCMobile', 'com.tencent.qqlive', 'com.baidu.searchbox',
-       'com.jingdong.app.mall', 'com.zhihu.android', 'com.qiyi.video']]
+multiApp_info = singleApp_info
 multiApp_info['label'] = 1
 
 all_sample_info = pd.concat((singleApp_info,multiApp_info),axis=0)
@@ -91,13 +76,7 @@ for i in range(Trainset_confidence.shape[0]):
     Trainset_conf_info = pd.concat((Trainset_conf_info,pd.DataFrame(conf).T),axis=0)
 
 single_confidence = all_sample_CateInfo[all_sample_CateInfo.label==0]
-single_confidence = single_confidence[['com.autonavi.minimap', 'com.netease.cloudmusic',
-       'com.kmxs.reader', 'com.dragon.read', 'com.hunantv.imgo.activity',
-       'com.xunmeng.pinduoduo', 'tv.danmaku.bili', 'com.ss.android.ugc.aweme',
-       'net.csdn.csdnplus', 'com.sina.weibog3', 'com.smile.gifmaker',
-       'com.taobao.taobao', 'com.UCMobile', 'com.tencent.qqlive',
-       'com.baidu.searchbox', 'com.jingdong.app.mall', 'com.zhihu.android',
-       'com.qiyi.video']]
+single_confidence = single_confidence[[:]]
 single_conf_info = pd.DataFrame()
 for i in range(single_confidence.shape[0]):
     conf = single_confidence.iloc[i].to_list()
@@ -106,13 +85,7 @@ for i in range(single_confidence.shape[0]):
     single_conf_info = pd.concat((single_conf_info,pd.DataFrame(conf).T),axis=0)
 
 multi_confidence = all_sample_CateInfo[all_sample_CateInfo.label==1]
-multi_confidence = multi_confidence[['com.autonavi.minimap', 'com.netease.cloudmusic',
-       'com.kmxs.reader', 'com.dragon.read', 'com.hunantv.imgo.activity',
-       'com.xunmeng.pinduoduo', 'tv.danmaku.bili', 'com.ss.android.ugc.aweme',
-       'net.csdn.csdnplus', 'com.sina.weibog3', 'com.smile.gifmaker',
-       'com.taobao.taobao', 'com.UCMobile', 'com.tencent.qqlive',
-       'com.baidu.searchbox', 'com.jingdong.app.mall', 'com.zhihu.android',
-       'com.qiyi.video']]
+multi_confidence = multi_confidence[[:]]
 multi_conf_info = pd.DataFrame()
 for i in range(multi_confidence.shape[0]):
     conf = multi_confidence.iloc[i].to_list()
@@ -214,4 +187,5 @@ for i in range(multiApp_info_single.shape[0]):
 multiApp_discover2single_acc_inall = count/len(multi_K2_Dist)
 multiApp_discover2single_acc_wrong = count/FP
 print("Discover one true App in FP: ")
+
 print("Acc_in_all={}\tAcc_in_FP={}".format(multiApp_discover2single_acc_inall,multiApp_discover2single_acc_wrong))
