@@ -162,7 +162,7 @@ def process_app_multithread(root_dir,bust_pf,big_graph_bar,num_node_list,num_edg
         counter += 1
         print("Processing....{}: {}/{}".format(app, counter, len(app_dir)))
 
-        # 创建子进程并启动
+        # sub-process
         proc = Process(target=process_one_app, args=(root_dir, app, bust_pf,big_graph_bar,num_node_list,num_edge_list,))
         processes.append(proc)
         proc.start()
@@ -222,4 +222,5 @@ if __name__ == "__main__":
     print("Total node dense ration = {}; edge dense ration = {}".format(node_dense_ration,edge_dense_ration))
 
     end_time = time.time()
-    print("运行时间：", (end_time - start_time)//60, "分钟")
+    print("Running Time：", (end_time - start_time)//60, "mins")
+
