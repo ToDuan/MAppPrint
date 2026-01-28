@@ -25,13 +25,8 @@ overlap = 0
 train_size = 5000
 test_size = 1000
 
-# FOAP
-target_app =  ['com.discord', 'com.azure.authenticator', 'com.shopify.arrive', 'com.bamnetworks.mobile.android.gameday.atbat',
-        'com.lingodeer','com.snapchat.android', 'com.northghost.touchvpn', 'com.skype.raider', 'ca.crea.app.consumer',
-        'com.phenix.cajou', 'com.mobilemedia.tanuki', 'com.yahoo.mobile.client.android.mail', 'com.proan.bestmart360',
-        'com.dywx.larkplayer', 'tw.com.youbike.plus', 'com.pratilipi.comics', 'com.lemon.lvoverseas',
-        'com.dailywire.thedailywire', 'com.viamichelin.android.viamichelinmobile', 'com.bbc.sounds', 'video.reface.app',
-        'org.aastudio.games.longnards', 'com.saramart.android', 'ru.labirint.android']
+# APP Name List
+target_app =  ['app_a','app_b',...]
 
 #used node features
 features = [
@@ -403,4 +398,5 @@ if __name__ == "__main__":
     save_graphs(testing_graph, dataset='test_graphs')
     
     end_time = time.time()
-    print("运行时间：", (end_time - start_time)/3600, "小时")
+    print("Running Time：", (end_time - start_time)/3600, "mins")
+
