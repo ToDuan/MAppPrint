@@ -42,7 +42,7 @@ def gene_dglGraph(data_dir,AppName,labelNameSet):
 
         feature_df['burst_idx'] = feature_df['burst_idx'].map(burst_reidx_map)
 
-        weight_df = weights_df[weights_df['graph_id'] == i].reset_index(drop=True)  # 删除索引列
+        weight_df = weights_df[weights_df['graph_id'] == i].reset_index(drop=True)  
 
         weight_df['source'] = weight_df['source'].map(burst_reidx_map)
         weight_df['target'] = weight_df['target'].map(burst_reidx_map)
