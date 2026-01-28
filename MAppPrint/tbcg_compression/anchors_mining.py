@@ -96,7 +96,7 @@ def app_burst_fp_mining_multithreading(root_dir,Bst_FP):
         counter += 1
         print("Processing....{}: {}/{}".format(app, counter, len(app_dir)))
 
-        # 创建子进程并启动
+        # sub-process
         proc = Process(target=app_burst_fp_mining, args=(root_dir, app, Bst_FP,))
         processes.append(proc)
         proc.start()
@@ -128,5 +128,6 @@ if __name__ == "__main__":
     save_burst_pf(Total_Bst_FP,save_path)
 
     end_time = time.time()
-    print("运行时间：", (end_time - start_time)/60, "分钟")
+    print("Running Time：", (end_time - start_time)/60, "mins")
+
 
