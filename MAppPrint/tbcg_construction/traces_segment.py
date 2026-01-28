@@ -8,13 +8,8 @@ root_path = '../Dataset/Traces_CSV/FOAP'
 params = [(5,0)]
 
 
-# FOAP
-target_app = ['com.discord', 'com.azure.authenticator', 'com.shopify.arrive', 'com.bamnetworks.mobile.android.gameday.atbat',
-        'com.lingodeer','com.snapchat.android', 'com.northghost.touchvpn', 'com.skype.raider', 'ca.crea.app.consumer',
-        'com.phenix.cajou', 'com.mobilemedia.tanuki', 'com.yahoo.mobile.client.android.mail', 'com.proan.bestmart360',
-        'com.dywx.larkplayer', 'tw.com.youbike.plus', 'com.pratilipi.comics', 'com.lemon.lvoverseas',
-        'com.dailywire.thedailywire', 'com.viamichelin.android.viamichelinmobile', 'com.bbc.sounds', 'video.reface.app',
-        'org.aastudio.games.longnards', 'com.saramart.android', 'ru.labirint.android']
+# APP Name List
+target_app = ['app_a','app_b',...]
 
 sources_folder = root_path
 
@@ -63,3 +58,4 @@ for duration, overlap in params:
           index += 1
     
       print('...................................................')
+
