@@ -2,7 +2,7 @@
 
 
 
-Datasets and code implementation for paper:  ''MAppPrint: Fast and Robust Mobile App Fingerprinting via Traffic Behavior Causal Graphs''.
+Datasets and code implementation for paper:  ''MAppPrint: Robust and Real-time Mobile App Fingerprinting via Traffic Behavior Causal Graphs''.
 
 This repository contains:
 
