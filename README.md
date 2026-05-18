@@ -36,7 +36,7 @@ https://drive.google.com/drive/folders/1wvZwYn3XJOlc0WfeINMJsCVwIUfr-_8f?usp=dri
 run: nohup sh train.sh > /dev/null 2>&1
 
 You can obtain the results of MAppPrint on the SIM-APP dataset with a 5-second time window:  
-<img src="sim-app-5s.jpg" alt="MAppPrint_SIM-APP_5s" style="zoom: 50%;" />
+<img src="sim-app-5s.jpg" alt="MAppPrint_SIM-APP_5s" style="zoom: 30%;" />
 
 
 # Use MAppPrint
