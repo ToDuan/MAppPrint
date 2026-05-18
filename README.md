@@ -14,19 +14,18 @@ This repository contains:
 
 # Environment Setup
 
-python==3.8.0
+python==3.8.0  
+torch==1.11.0+cu113  
+torchvision==0.12.0+cu113  
+torchsummary==1.5.1  
+torchaudio==0.11.0  
 
-torch==1.11.0+cu113
-torchvision==0.12.0+cu113
-torchsummary==1.5.1
-torchaudio==0.11.0
+dgl-cu113==0.9.1.post1  
+numpy==1.24.4  
+pandas==2.0.3  
+scikit-learn==1.3.2  
 
-dgl-cu113==0.9.1.post1
-numpy==1.24.4
-pandas==2.0.3
-scikit-learn==1.3.2
-
-**You can directly clone the conda environment using the `MAppPrint_conda_env.yml' file:**
+**You can directly clone the conda environment using the** `MAppPrint_conda_env.yml' **file:**
 
 conda env create -f MAppPrint_conda_env.yml
 
@@ -36,7 +35,8 @@ https://drive.google.com/drive/folders/1wvZwYn3XJOlc0WfeINMJsCVwIUfr-_8f?usp=dri
 
 run: nohup sh train.sh > /dev/null 2>&1
 
-You can obtain the results of MAppPrint on the SIM-APP dataset with a 5-second time window
+You can obtain the results of MAppPrint on the SIM-APP dataset with a 5-second time window:  
+<img src="sim-app-5s.jpg" alt="MAppPrint_SIM-APP_5s" style="zoom: 50%;" />
 
 
 # Use MAppPrint
