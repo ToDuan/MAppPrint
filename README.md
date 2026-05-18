@@ -25,7 +25,7 @@ numpy==1.24.4
 pandas==2.0.3  
 scikit-learn==1.3.2  
 
-**You can directly clone the conda environment using the** `MAppPrint_conda_env.yml' **file:**
+**You can directly clone the conda environment using the** `MAppPrint_conda_env.yml` **file:**
 
 conda env create -f MAppPrint_conda_env.yml
 
