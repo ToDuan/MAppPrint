@@ -29,7 +29,9 @@ scikit-learn==1.3.2
 
 conda env create -f MAppPrint_conda_env.yml
 
-# Toy Example
+# Toy Example  
+
+Download the SIM-APP dataset from:  
 
 https://drive.google.com/drive/folders/1wvZwYn3XJOlc0WfeINMJsCVwIUfr-_8f?usp=drive_link
 
